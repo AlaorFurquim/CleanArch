@@ -26,7 +26,7 @@ namespace CleanArch.Domain.Tests
             action.Should().Throw<CleanArch.Domain.Validation.DomainExceptionValidation>()
                 .WithMessage("Invalid name, too short, minimum 3 characters");
         }
-        [Fact] 
+        [Fact]
         public void CrateCategory_MissingNameValue_ResultsObjetctValidState()
         {
             Action action = () => new Category(1, "");
