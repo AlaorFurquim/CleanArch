@@ -50,7 +50,7 @@ namespace CleanArch.Domain.Entities
 
             DomainExceptionValidation.when(string.IsNullOrEmpty(image), "Invalid image. Name is requered");
 
-            DomainExceptionValidation.when(image.Length > 250, "Invalid image, too long, maximum 250 characters");
+            DomainExceptionValidation.when(image?.Length > 250, "Invalid image, too long, maximum 250 characters");
 
             Name = name;
             Description = description;
