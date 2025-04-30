@@ -38,11 +38,11 @@ namespace CleanArch.Domain.Entities
         {
             DomainExceptionValidation.when(string.IsNullOrEmpty(name), "Invalid name. Name is requered");
 
-            DomainExceptionValidation.when(name.Length < 5, "Invalid name, too short, minimum 3 characters");
+            DomainExceptionValidation.when(name.Length < 5, "Invalid name, too short, minimum 5 characters");
 
             DomainExceptionValidation.when(string.IsNullOrEmpty(description), "Invalid description. Name is requered");
 
-            DomainExceptionValidation.when(description.Length < 250, "Invalid description, too short, minimum 3 characters");
+            DomainExceptionValidation.when(description.Length < 3, "Invalid description, too short, minimum 3 characters");
 
             DomainExceptionValidation.when(price < 0, "Invalid value price.");
 
